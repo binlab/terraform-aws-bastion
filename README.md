@@ -103,23 +103,26 @@ $
 - [ ] Add support of **AliCloud** Terraform module
 - [ ] Add support of **Oracle Cloud (OCI)** Terraform module
 
+## Limitations
+
+- Requirements block and [versions.tf](versions.tf) may not accurately display a real minimum version of providers. A declared versions ware just an installed in the time of development and testing of the module and can give guaranties of working with this or higher version. If you use older versions of modules for some reason and can give some guarantees of working with it, please create an issue for downscaling some version to minimal needed.
 
 ## Requirements
 
 | Name | Version |
 |------|---------|
 | terraform | >= 0.12 |
-| aws | ~> 2.53.0 |
-| ignition | ~> 1.2.1 |
-| tls | ~> 2.1.1 |
+| aws | >= 2.53.0 |
+| ignition | >= 1.2.1 |
+| tls | >= 2.1.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | ~> 2.53.0 |
-| ignition | ~> 1.2.1 |
-| tls | ~> 2.1.1 |
+| aws | >= 2.53.0 |
+| ignition | >= 1.2.1 |
+| tls | >= 2.1.1 |
 
 ## Inputs
 
