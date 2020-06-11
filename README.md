@@ -48,7 +48,7 @@ The module can be deployed with almost default values of variables. For more det
 ...
 
 module "bastion" {
-  source = "https://github.com/binlab/terraform-aws-bastion.git?ref=v0.1.0"
+  source = "github.com/binlab/terraform-aws-bastion?ref=v0.1.0"
 
   vpc_id                = vpc.vpc_id
   vpc_subnet_id         = vpc.public_subnets[0]
