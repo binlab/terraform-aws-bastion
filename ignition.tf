@@ -82,7 +82,7 @@ data ignition_file "ca_ssh_public_keys" {
   }
 }
 
-data "ignition_file" "ca_tls_public_keys" {
+data ignition_file "ca_tls_public_keys" {
   count = local.ca_tls_public_keys ? 1 : 0
 
   filesystem = "root"
@@ -96,7 +96,7 @@ data "ignition_file" "ca_tls_public_keys" {
   }
 }
 
-data "ignition_file" "bastion_ssh_auth_keys" {
+data ignition_file "bastion_ssh_auth_keys" {
   count = local.bastion_ssh_auth_keys ? 1 : 0
 
   filesystem = "root"
