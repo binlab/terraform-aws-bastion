@@ -27,3 +27,11 @@ output "ec2_ssh_private_key" {
     local.ec2_ssh_auth_keys ? "" : tls_private_key.ec2_ssh[0].private_key_pem
   )
 }
+
+output "security_group_id" {
+  description = <<-EOT
+    Security Group ID which created within the module
+    Useful for assigning to other Security Groups as a source
+  EOT
+  value       = aws_security_group.bastion.id
+}
