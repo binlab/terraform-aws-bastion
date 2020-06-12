@@ -1,4 +1,4 @@
-resource "tls_private_key" "ec2_ssh" {
+resource tls_private_key "ec2_ssh" {
   count = local.ec2_ssh_auth_keys ? 0 : 1
 
   algorithm   = var.ec2_ssh_algorithm
