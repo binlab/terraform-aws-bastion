@@ -1,5 +1,19 @@
 # Terraform AWS Bastion host based on [Docker Bastion](https://github.com/binlab/docker-bastion)
 
+<p align="center">
+  <a href="https://github.com/binlab/terraform-aws-bastion/blob/LICENSE"><img alt="License" src="https://img.shields.io/github/license/binlab/terraform-aws-bastion?logo=github"></a>
+  <a href="https://github.com/binlab/terraform-aws-bastion/tags"><img alt="GitHub tag" src="https://img.shields.io/github/v/tag/binlab/terraform-aws-bastion?logo=github"></a>
+  <a href="https://github.com/binlab/terraform-aws-bastion/releases"><img alt="GitHub release" src="https://img.shields.io/github/v/release/binlab/terraform-aws-bastion?logo=github"></a>
+  <a href="https://github.com/binlab/terraform-aws-bastion/commits"><img alt="Last Commit" src="https://img.shields.io/github/last-commit/binlab/terraform-aws-bastion?logo=github"></a>
+  <a href="https://github.com/binlab/terraform-aws-bastion/commits"><img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/binlab/terraform-aws-bastion?logo=github"></a>
+</p>
+<p align="center">
+  <img alt="languages Count" src="https://img.shields.io/github/languages/count/binlab/terraform-aws-bastion">
+  <img alt="Languages Top" src="https://img.shields.io/github/languages/top/binlab/terraform-aws-bastion">
+  <img alt="Code Size" src="https://img.shields.io/github/languages/code-size/binlab/terraform-aws-bastion">
+  <img alt="Repo Size" src="https://img.shields.io/github/repo-size/binlab/terraform-aws-bastion">
+</p>
+
 A **Bastion** host is providing isolation between not safe external world and private VPC for infrastructure. That's what Amazon himself writes about it:
 
 >Including bastion hosts in your VPC environment enables you to securely connect to your Linux instances without exposing your environment to the Internet. After you set up your bastion hosts, you can access the other instances in your VPC through Secure Shell (SSH) connections on Linux. Bastion hosts are also configured with security groups to provide fine-grained ingress control. [source](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/architecture.html)
@@ -88,7 +102,7 @@ ec2_ssh_private_key =
 $
 ```
 
-\* "ec2_ssh_private_key" is empty because we defined own key
+\* `ec2_ssh_private_key` is empty because we defined own key
 
 ## TODO
 
