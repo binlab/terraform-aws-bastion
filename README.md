@@ -107,7 +107,7 @@ $
 ## TODO
 
 - [ ] Add examples of use with different cases
-- [ ] Hosted module on [Terraform Registry](https://registry.terraform.io)
+- [ ] Hosted module on [Terraform Registry](https://registry.terraform.io) - [#11](https://github.com/binlab/terraform-aws-bastion/issues/11)
 - [ ] Add validation of input data in [variables.tf](variables.tf) 
 - [ ] Add support **Fedora CoreOS** as [announced](https://coreos.com/os/docs/latest/cloud-config-deprecated.html) **CoreOS Container Linux** will reach its end of life on **May 26, 2020** and will no longer receive updates.
 - [ ] Replace creating **EC2 instances** to an autoscaling group
