@@ -164,6 +164,7 @@ $
 | instance\_type | Type of instance e.g. [t3.small] | `string` | `"t3.small"` | no |
 | monitoring | CloudWatch detailed monitoring [true/false] | `bool` | `false` | no |
 | prefix | Prefix of a tag "Name", can be a namespace.<br>Format of "Name" tag "<prefix>-<stack>-<resource>" | `string` | `"tf-"` | no |
+| security\_groups | List of external Security Groups for assigning to EC2 instances. <br>Useful for custom configuration with another infrastructure to which <br>the Bastion connected. | `list(string)` | `[]` | no |
 | ssh\_admin\_principals | List of SSH authorized principals for user "Core" when SSH login <br>configured via Certificate Authority ("ca\_ssh\_public\_key" is set)<br>https://man.openbsd.org/sshd_config#AuthorizedPrincipalsFile | `list(string)` | <pre>[<br>  "tower"<br>]</pre> | no |
 | ssh\_bastion\_principals | List of SSH authorized principals for "Bastion" user when SSH login <br>configured via Certificate Authority ("ca\_ssh\_public\_key" is set)<br>https://man.openbsd.org/sshd_config#AuthorizedPrincipalsFile | `list(string)` | <pre>[<br>  "bastion"<br>]</pre> | no |
 | ssh\_core\_principals | List of SSH authorized principals for user "Admin" when SSH login <br>configured via Certificate Authority ("ca\_ssh\_public\_key" is set) <br>More: https://man.openbsd.org/sshd_config#AuthorizedPrincipalsFile | `list(string)` | <pre>[<br>  "sudo"<br>]</pre> | no |
