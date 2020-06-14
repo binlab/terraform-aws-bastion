@@ -64,6 +64,16 @@ variable "ec2_ssh_cidr" {
   default     = ["0.0.0.0/32"]
 }
 
+variable "security_groups" {
+  description = <<-EOT
+    List of external Security Groups for assigning to EC2 instances. 
+    Useful for custom configuration with another infrastructure to which 
+    the Bastion connected.
+  EOT
+  type        = list(string)
+  default     = []
+}
+
 variable "ami_vendor" {
   description = <<-EOT
     AMI filter for OS vendor [coreos/flatcar]

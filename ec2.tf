@@ -13,9 +13,10 @@ resource aws_instance "bastion" {
     )
   )
 
-  vpc_security_group_ids = [
-    aws_security_group.bastion.id
-  ]
+  vpc_security_group_ids = concat(
+    [aws_security_group.bastion.id],
+    var.security_groups,
+  )
 
   tags = merge(local.tags, {
     Name = format(local.name_tmpl, "bastion")
