@@ -145,6 +145,7 @@ $
 | ami\_channel | AMI filter for OS channel [stable/edge/beta/etc] | `string` | `"stable"` | no |
 | ami\_image | Specific AMI image ID in current Avalability Zone e.g. [ami-123456]<br>If provided nodes will be run on it, for cases when image built by <br>Packer if set it will disable search images by "ami\_vendor" and <br>"ami\_channel". Note: Instance OS should support CoreOS Ignition <br>provisioning | `string` | `""` | no |
 | ami\_vendor | AMI filter for OS vendor [coreos/flatcar] | `string` | `"flatcar"` | no |
+| associate\_public\_ip | Associate a public IP address with an instance in a VPC in time of <br>launch | `bool` | `true` | no |
 | availability\_zone | Index of Availability Zone to deploy, starting from 0. <br>For example: "us-east-1a"=0, "us-east-1b"=1, "us-east-1c"=2 ... | `number` | `0` | no |
 | bastion\_ssh\_auth\_keys | List of SSH authorized keys assigned to "bastion" user<br>By default is ["false"] which means disabled pass external keys and <br>dont generate | `list(string)` | `[]` | no |
 | bastion\_ssh\_cidr | Allowed CIDRs to connect to a cluster on ALB endpoint | `list(string)` | <pre>[<br>  "0.0.0.0/32"<br>]</pre> | no |
