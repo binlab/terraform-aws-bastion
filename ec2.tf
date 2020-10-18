@@ -1,9 +1,10 @@
 resource aws_instance "bastion" {
-  instance_type     = var.instance_type
-  monitoring        = var.monitoring
-  availability_zone = element(data.aws_availability_zones.current.names, var.availability_zone)
-  user_data         = data.ignition_config.bastion.rendered
-  subnet_id         = var.vpc_subnet_id
+  instance_type               = var.instance_type
+  monitoring                  = var.monitoring
+  availability_zone           = element(data.aws_availability_zones.current.names, var.availability_zone)
+  user_data                   = data.ignition_config.bastion.rendered
+  subnet_id                   = var.vpc_subnet_id
+  associate_public_ip_address = var.associate_public_ip
 
   ami = (
     var.ami_image != "" ? var.ami_image : (

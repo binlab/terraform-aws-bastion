@@ -125,6 +125,15 @@ variable "vpc_subnet_id" {
   type        = string
 }
 
+variable "associate_public_ip" {
+  description = <<-EOT
+    Associate a public IP address with an instance in a VPC in time of 
+    launch
+  EOT
+  type        = bool
+  default     = true
+}
+
 variable "instance_type" {
   description = <<-EOT
     Type of instance e.g. [t3.small]
